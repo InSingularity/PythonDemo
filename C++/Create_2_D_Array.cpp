@@ -5,16 +5,15 @@ int **Create_2_D_Array(int row, int col)
 {
 	int **arr = NULL;
 	arr = new int*[row];
-	for (int i = 0;i < row;i++)
+	for (int i = 0; i < row; i++)
 		arr[i] = new int[col];
-	arr[2][3] = 10000;
 	return arr;
 }
 
 //释放二维指针创建的二维数组
-void Delete_2_D_Array(int **arr,int row, int col)
+void Delete_2_D_Array(int **arr, int row, int col)
 {
-	for (int i = 0;i < row;i++)
+	for (int i = 0; i < row; i++)
 	{
 		delete[] arr[i];
 		arr[i] = NULL;
